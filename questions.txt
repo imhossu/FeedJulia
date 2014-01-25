@@ -1,0 +1,9 @@
+1. vegetarian
+2. spicy (mexican, thai, indian, korean)
+3. light (sushi, deli, café, italian)
+4. fish (sushi, seafood)
+5. carnivorous! aka I want meattt (german, grill, steak)
+6. soup (italian, pub, deli, pho)
+7. asian (chinese, jap, korean)
+8. price range 0-4 checkboxes
+9. warm (italian, grill, pizza, mexican) /  cold (sushi, smoothie, ...)
