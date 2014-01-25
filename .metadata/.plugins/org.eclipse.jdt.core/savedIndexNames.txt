@@ -1,0 +1,3 @@
+INDEX VERSION 1.126+/Users/iMaltese/Desktop/HackRice/.metadata/.plugins/org.eclipse.jdt.core
+1846690843.index
+332350163.index
