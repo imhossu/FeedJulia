@@ -1,5 +1,5 @@
 hackRice 2014 App
 
-App too feed children!
+App to feed children!
 
 Kate plays with git too!
