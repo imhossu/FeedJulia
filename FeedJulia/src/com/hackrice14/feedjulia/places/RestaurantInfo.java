@@ -63,6 +63,7 @@ public class RestaurantInfo implements Serializable{
 			photoURL += "&photoreference=" + reference;
 			photoURL += "&sensor=true";
 			photoURL += "&key=" + key;
+			
 			return photoURL;
 		} catch(JSONException e) {
 			return null;
