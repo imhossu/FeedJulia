@@ -1,7 +1,7 @@
 package com.hackrice14.feedjulia.places;
 
+import android.annotation.SuppressLint;
 import java.io.Serializable;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -15,11 +15,13 @@ public class RestaurantInfo implements Serializable{
 	private String baseStr;
 	
 	private String key;
+	private String keyword;
 	
-	public RestaurantInfo(JSONObject base, String key) {
+	public RestaurantInfo(JSONObject base, String key, String keyword) {
 		this.base = base;
 		this.baseStr = base.toString();
 		
+		this.keyword = keyword;
 		this.key = key;
 	}
 	
@@ -28,7 +30,7 @@ public class RestaurantInfo implements Serializable{
 			if(base == null)
 				base = new JSONObject(baseStr);
 			
-			return base.getString("name");
+			return formatString(base.getString("name"));
 		} catch (JSONException e) {
 			return "[NO NAME]";
 		}
@@ -59,6 +61,33 @@ public class RestaurantInfo implements Serializable{
 		} catch (JSONException e) {
 			return 0;
 		}
+	}
+	
+	public double getRating() {
+		try {
+			if(base == null)
+				base = new JSONObject(baseStr);
+			
+			return base.getDouble("rating");
+		} catch (JSONException e) {
+			return 3d;
+		}
+	}
+	
+	public String getKeyword() {
+		return formatString(keyword);
+	}
+	
+	public String formatString(String input) {
+		String[] words = input.split(" ");
+		String res ="";
+		for(String word : words) {
+			if(words.length > 0) {
+				if(res.length() > 0) res += " ";
+				res += Character.toUpperCase(word.charAt(0)) + word.substring(1);
+			}
+		}
+		return input;
 	}
 	
 	public double getLong() {

@@ -8,14 +8,22 @@ import com.hackrice14.feedjulia.places.RestaurantInfo;
 
 public class DecisionMaker {
 	public ArrayList<RestaurantInfo> makeDecision(SurveyResponse[] responses, double lat, double lon) {
+		if(responses.length == 0) new PlacesAPI().getPlaces(lat, lon, new String[]{"doughnuts"}, 1);
+		
 		QuestionWeight[] questions = QuestionWeight.questions;
 		
 		HashMap<String, Double> record = new HashMap<String, Double>();
+		
+		double price = 0;
 		for(SurveyResponse person : responses) {
 			for(QuestionWeight question : questions) {
 				question.getWeightsFromResponse(person, record);
 			}
+			
+			price += person.getAnswer("price");
 		}
+		
+		price /= responses.length;
 		
 		double top = -1000;
 		double next = -1000;
@@ -46,10 +54,12 @@ public class DecisionMaker {
 			}
 		}
 		
+		
+		
 		PlacesAPI lookup = new PlacesAPI();
-		ArrayList<RestaurantInfo> topMatches = lookup.getPlaces(lat, lon, new String[]{best});
-		ArrayList<RestaurantInfo> nextMatches = lookup.getPlaces(lat, lon, new String[]{nextBest});
-		ArrayList<RestaurantInfo> thirdMatches = lookup.getPlaces(lat, lon, new String[]{thirdBest});
+		ArrayList<RestaurantInfo> topMatches = lookup.getPlaces(lat, lon, new String[]{best}, price);
+		ArrayList<RestaurantInfo> nextMatches = lookup.getPlaces(lat, lon, new String[]{nextBest}, price);
+		ArrayList<RestaurantInfo> thirdMatches = lookup.getPlaces(lat, lon, new String[]{thirdBest}, price);
 		
 		ArrayList<RestaurantInfo> result = new ArrayList<RestaurantInfo>();
 		for(int i = 0; i < topMatches.size() || i < nextMatches.size() || i < thirdMatches.size(); i++) {

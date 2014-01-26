@@ -14,8 +14,8 @@ import org.json.JSONObject;
 public class PlacesAPI {
 	private String key = "AIzaSyD53LDwRYVU9YVnNp4wdM24uV26Inn_e94";
 	
-	public ArrayList<RestaurantInfo> getPlaces(double lat, double lon, String[] keywords) {
-		String url = buildURL(lat, lon, keywords);
+	public ArrayList<RestaurantInfo> getPlaces(double lat, double lon, String[] keywords, double price) {
+		String url = buildURL(lat, lon, keywords, price);
 		String response = getResponse(url);
 
 		ArrayList<RestaurantInfo> restResults = new ArrayList<RestaurantInfo>();
@@ -25,7 +25,7 @@ public class PlacesAPI {
 			JSONObject json = new JSONObject(response);
 			JSONArray results = json.getJSONArray("results");
 			for(int i = 0; i < results.length(); i++) {
-				RestaurantInfo info = new RestaurantInfo(results.getJSONObject(i), key);
+				RestaurantInfo info = new RestaurantInfo(results.getJSONObject(i), key, keywords[0]);
 				restResults.add(info);
 			}
 			
@@ -52,10 +52,32 @@ public class PlacesAPI {
 		return "";
 	}
 
-	private String buildURL(double lat, double lon, String[] keywords) {
+	private String buildURL(double lat, double lon, String[] keywords, double price) {
 		// https://maps.googleapis.com/maps/api/place/nearbysearch/xml?key=ABCDE&location=29.76429,-95.38370&radius=10000&sensor=true&types=restaurant&keyword=vegetarian,burger
 
 		//https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyCo-i6xMhpk_c4MTPBQwohSxUugKZosl_A&location=29.76429,-95.38370&radius=10000&sensor=true&types=restaurant&keyword=vegetarian
+
+		int minPrice;
+		int maxPrice;
+		if(price <= 1.2) {
+			minPrice = 0;
+			maxPrice = 2;
+		} else if (price <= 2){
+			minPrice = 0;
+			maxPrice = 3;
+		} else if (price <= 2.5) {
+			minPrice = 0;
+			maxPrice = 4;
+		} else if (price <= 3) {
+			minPrice = 1;
+			maxPrice = 4;
+		} else if (price <= 3.5) {
+			minPrice = 2;
+			maxPrice = 4;
+		} else {
+			minPrice = 3;
+			maxPrice = 4;
+		}
 		
 		//if(true)
 		//	return "https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyD53LDwRYVU9YVnNp4wdM24uV26Inn_e94&location=29.76429,-95.38370&radius=10000&sensor=true&types=restaurant&keyword=vegetarian";
@@ -68,7 +90,9 @@ public class PlacesAPI {
 		result += "&radius=10000"; // distance (in meters) to search
 		result += "&sensor=true";
 		result += "&types=restaurant";
-
+		result += "&minprice=" + minPrice;
+		result += "&maxprice=" + maxPrice;
+		
 		if (keywords.length > 0) {
 			result += "&keyword=" + keywords[0];
 			for (int i = 1; i < keywords.length; i++) {
