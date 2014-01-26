@@ -250,6 +250,7 @@ containing a value of this type.
         public static final int WarmChoices=0x7f050031;
         public static final int acceptResult=0x7f050011;
         public static final int action_settings=0x7f050035;
+        public static final int address=0x7f05000d;
         public static final int createGroup=0x7f050015;
         public static final int editText2=0x7f050009;
         public static final int enterLoc=0x7f05000c;
@@ -280,7 +281,6 @@ containing a value of this type.
         public static final int tableWarm=0x7f05002f;
         public static final int terrain=0x7f050003;
         public static final int textVeg=0x7f050018;
-        public static final int textView1=0x7f05000d;
         public static final int textView2=0x7f050005;
         public static final int textView3=0x7f05000a;
         public static final int textView4=0x7f050008;

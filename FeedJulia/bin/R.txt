@@ -85,6 +85,7 @@ int id TextWarm 0x7f050030
 int id WarmChoices 0x7f050031
 int id acceptResult 0x7f050011
 int id action_settings 0x7f050035
+int id address 0x7f05000d
 int id createGroup 0x7f050015
 int id editText2 0x7f050009
 int id enterLoc 0x7f05000c
@@ -115,7 +116,6 @@ int id tableVeg 0x7f050017
 int id tableWarm 0x7f05002f
 int id terrain 0x7f050003
 int id textVeg 0x7f050018
-int id textView1 0x7f05000d
 int id textView2 0x7f050005
 int id textView3 0x7f05000a
 int id textView4 0x7f050008
