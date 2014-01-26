@@ -9,6 +9,8 @@ package com.hackrice14.feedjulia;
 
 public final class R {
     public static final class array {
+        public static final int YN=0x7f060001;
+        public static final int dollars=0x7f060002;
         public static final int options=0x7f060000;
     }
     public static final class attr {
@@ -31,44 +33,74 @@ public final class R {
         public static final int red=0x7f020004;
     }
     public static final class id {
-        public static final int Spinner01=0x7f090010;
-        public static final int Spinner02=0x7f090013;
-        public static final int TextView01=0x7f09000f;
-        public static final int TextView02=0x7f090012;
-        public static final int action_settings=0x7f090016;
-        public static final int createGroup=0x7f09000b;
+        public static final int AsianChoices=0x7f090027;
+        public static final int FishChoices=0x7f09001e;
+        public static final int LightChoices=0x7f09001b;
+        public static final int MeatChoices=0x7f090021;
+        public static final int PriceChoices=0x7f09002a;
+        public static final int SoupChoices=0x7f090024;
+        public static final int SpicyChoices=0x7f090018;
+        public static final int TextAsian=0x7f090026;
+        public static final int TextFish=0x7f09001d;
+        public static final int TextLight=0x7f09001a;
+        public static final int TextMeat=0x7f090020;
+        public static final int TextPrice=0x7f090029;
+        public static final int TextSoup=0x7f090023;
+        public static final int TextSpicy=0x7f090017;
+        public static final int TextWarm=0x7f09002c;
+        public static final int WarmChoices=0x7f09002d;
+        public static final int accept=0x7f09000b;
+        public static final int action_settings=0x7f090031;
+        public static final int button1=0x7f09000e;
+        public static final int createGroup=0x7f090011;
         public static final int editText2=0x7f090004;
-        public static final int editText3=0x7f090002;
         public static final int enterLoc=0x7f090007;
         public static final int finish=0x7f090006;
-        public static final int joinGroup=0x7f09000c;
-        public static final int mainLayout=0x7f090009;
-        public static final int passThePhone=0x7f09000a;
+        public static final int image=0x7f09000a;
+        public static final int imageView1=0x7f09000c;
+        public static final int joinGroup=0x7f090012;
+        public static final int mainLayout=0x7f09000f;
+        public static final int makeDecision=0x7f090030;
+        public static final int moreSurvey=0x7f09002f;
+        public static final int next=0x7f09000d;
+        public static final int numPeople=0x7f090002;
+        public static final int passThePhone=0x7f090010;
         public static final int radioButton=0x7f090001;
-        public static final int spinner3=0x7f090015;
-        public static final int tableRow1=0x7f09000d;
-        public static final int tableRow2=0x7f09000e;
-        public static final int tableRow3=0x7f090011;
-        public static final int tableRow4=0x7f090014;
+        public static final int tableAsian=0x7f090025;
+        public static final int tableButtons=0x7f09002e;
+        public static final int tableFish=0x7f09001c;
+        public static final int tableLight=0x7f090019;
+        public static final int tableMeat=0x7f09001f;
+        public static final int tablePrice=0x7f090028;
+        public static final int tableSoup=0x7f090022;
+        public static final int tableSpicy=0x7f090016;
+        public static final int tableVeg=0x7f090013;
+        public static final int tableWarm=0x7f09002b;
+        public static final int textVeg=0x7f090014;
         public static final int textView1=0x7f090008;
         public static final int textView2=0x7f090000;
         public static final int textView3=0x7f090005;
         public static final int textView4=0x7f090003;
+        public static final int title=0x7f090009;
+        public static final int vegChoices=0x7f090015;
     }
     public static final class layout {
         public static final int activity_group_settings=0x7f030000;
-        public static final int activity_start_screen=0x7f030001;
-        public static final int activity_survey=0x7f030002;
+        public static final int activity_place=0x7f030001;
+        public static final int activity_start_screen=0x7f030002;
+        public static final int activity_survey=0x7f030003;
     }
     public static final class menu {
         public static final int group_settings=0x7f080000;
-        public static final int start_screen=0x7f080001;
-        public static final int survey=0x7f080002;
+        public static final int place=0x7f080001;
+        public static final int start_screen=0x7f080002;
+        public static final int survey=0x7f080003;
     }
     public static final class string {
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int hello_world=0x7f050002;
+        public static final int title_activity_place=0x7f050004;
         public static final int title_activity_survey=0x7f050003;
     }
     public static final class style {

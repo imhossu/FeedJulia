@@ -38,6 +38,7 @@ public class PlacesAPI {
 
 	private String getResponse(String url) {
 		try {
+			System.out.println(url);
 			HttpClient client = new DefaultHttpClient();
 			HttpGet get = new HttpGet(url);
 

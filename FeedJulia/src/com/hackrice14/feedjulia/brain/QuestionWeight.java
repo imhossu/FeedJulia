@@ -18,6 +18,7 @@ public class QuestionWeight {
 
 	public void getWeightsFromResponse(SurveyResponse response,
 			Map<String, Double> record) {
+		System.out.println(question);
 		double answer = response.getAnswer(question);
 
 		double weight;

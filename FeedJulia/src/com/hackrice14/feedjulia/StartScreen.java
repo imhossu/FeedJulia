@@ -42,7 +42,7 @@ public class StartScreen extends Activity {
         });
         
         ImageView joinGroup = (ImageView)findViewById(R.id.joinGroup);
-        createGroup.setOnClickListener(new OnClickListener() 
+        joinGroup.setOnClickListener(new OnClickListener() 
         {
             @Override
             public void onClick(View v) 

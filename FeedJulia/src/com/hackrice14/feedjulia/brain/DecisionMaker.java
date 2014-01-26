@@ -36,6 +36,6 @@ public class DecisionMaker {
 		}
 		
 		PlacesAPI lookup = new PlacesAPI();
-		return lookup.getPlaces(lat, lon, new String[]{best, nextBest});
+		return lookup.getPlaces(lat, lon, new String[]{best});
 	}
 }

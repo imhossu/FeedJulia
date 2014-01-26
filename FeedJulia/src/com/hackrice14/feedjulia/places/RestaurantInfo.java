@@ -1,10 +1,16 @@
 package com.hackrice14.feedjulia.places;
 
+import java.io.Serializable;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class RestaurantInfo {
+public class RestaurantInfo implements Serializable{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JSONObject base;
 	private String key;
 	

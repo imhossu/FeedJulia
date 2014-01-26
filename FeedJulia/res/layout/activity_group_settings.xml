@@ -25,7 +25,7 @@
         android:text="Use Current location" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/numPeople"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView4"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignLeft="@+id/numPeople"
         android:ems="10"
         android:inputType="number" />
 
