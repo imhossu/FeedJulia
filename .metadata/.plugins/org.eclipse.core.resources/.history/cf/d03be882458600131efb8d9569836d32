@@ -27,21 +27,22 @@
         android:src="@drawable/red" />
 
     <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/image"
-        android:layout_alignRight="@+id/image"
-        android:layout_marginBottom="26dp"
-        android:text="Next Bitches!" />
-
-    <Button
         android:id="@+id/accept"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/next"
-        android:layout_alignBottom="@+id/next"
-        android:layout_toLeftOf="@+id/title"
+        android:layout_alignBottom="@+id/imageView1"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_marginBottom="16dp"
+        android:layout_marginLeft="49dp"
         android:text="Accept" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/imageView1"
+        android:layout_marginRight="49dp"
+        android:text="Next Bitches!" />
 
 </RelativeLayout>

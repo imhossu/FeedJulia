@@ -11,23 +11,16 @@ public class RestaurantInfo implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	private transient JSONObject base = null;
-	private String baseStr;
-	
+	private JSONObject base;
 	private String key;
 	
 	public RestaurantInfo(JSONObject base, String key) {
 		this.base = base;
-		this.baseStr = base.toString();
-		
 		this.key = key;
 	}
 	
 	public String getName() {
 		try {
-			if(base == null)
-				base = new JSONObject(baseStr);
-			
 			return base.getString("name");
 		} catch (JSONException e) {
 			return "[NO NAME]";
@@ -36,9 +29,6 @@ public class RestaurantInfo implements Serializable{
 	
 	public String getAddress() {
 		try {
-			if(base == null)
-				base = new JSONObject(baseStr);
-			
 			return base.getString("vicinity");
 		} catch (JSONException e) {
 			return "[NO ADDRESS FOUND]";
@@ -47,9 +37,6 @@ public class RestaurantInfo implements Serializable{
 	
 	public String getPhoto(int maxWidth) {
 		try {
-			if(base == null)
-				base = new JSONObject(baseStr);
-			
 			JSONArray photoList = base.getJSONArray("photos");
 			JSONObject photoInfo = photoList.getJSONObject(0);
 			

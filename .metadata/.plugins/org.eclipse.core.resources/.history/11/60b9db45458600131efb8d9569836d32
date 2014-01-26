@@ -47,6 +47,7 @@ public class RestaurantInfo implements Serializable{
 	
 	public String getPhoto(int maxWidth) {
 		try {
+
 			if(base == null)
 				base = new JSONObject(baseStr);
 			
