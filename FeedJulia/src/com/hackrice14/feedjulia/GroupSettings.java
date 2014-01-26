@@ -2,7 +2,14 @@ package com.hackrice14.feedjulia;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.RadioButton;
+import android.widget.TextView;
 
 public class GroupSettings extends Activity {
 
@@ -10,6 +17,25 @@ public class GroupSettings extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_group_settings);
+		
+		final RadioButton radio = (RadioButton) findViewById(R.id.radioButton);
+		String location;
+		if (radio.isChecked()) {
+			//location is gps location
+			location = "Houston";
+		} else {
+			TextView enteredLoc = (TextView) findViewById(R.id.enterLoc);
+			location = enteredLoc.getText().toString();
+		}
+		final String locPass = location;
+		final Button button = (Button) findViewById(R.id.finish);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent group = new Intent(GroupSettings.this, Survey.class);
+            	group.putExtra("Location", locPass);
+            	startActivity(group);
+            }
+        });
 	}
 
 	@Override
