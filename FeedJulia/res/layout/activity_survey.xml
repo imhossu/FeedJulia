@@ -215,7 +215,30 @@
 	        android:text="Make Decision" />
         </TableRow>
 
-       
+        <RadioGroup 
+    		android:layout_width="fill_parent"
+    		android:layout_height="wrap_content"
+    		android:orientation="horizontal"
+    		android:weightSum="100">
+    		<RadioButton android:id="@+id/no"
+        		android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="33"
+        		android:text="no"
+        		android:onClick="onRadioButtonClicked"/>
+    		<RadioButton android:id="@+id/maybe"
+        		android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="33"
+        		android:text="maybe"
+        		android:onClick="onRadioButtonClicked"/>
+    		<RadioButton android:id="@+id/yes"
+        		android:layout_width="0dp"
+        		android:layout_height="wrap_content"
+        		android:layout_weight="33"
+        		android:text="yes"
+        		android:onClick="onRadioButtonClicked"/>
+		</RadioGroup>
 
     </TableLayout>
     

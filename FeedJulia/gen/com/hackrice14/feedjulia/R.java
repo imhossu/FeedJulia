@@ -249,7 +249,7 @@ containing a value of this type.
         public static final int TextWarm=0x7f050030;
         public static final int WarmChoices=0x7f050031;
         public static final int acceptResult=0x7f050011;
-        public static final int action_settings=0x7f050035;
+        public static final int action_settings=0x7f050038;
         public static final int createGroup=0x7f050015;
         public static final int editText2=0x7f050009;
         public static final int enterLoc=0x7f05000c;
@@ -260,8 +260,10 @@ containing a value of this type.
         public static final int mainLayout=0x7f050013;
         public static final int makeDecision=0x7f050034;
         public static final int map=0x7f050010;
+        public static final int maybe=0x7f050036;
         public static final int moreSurvey=0x7f050033;
         public static final int nextResult=0x7f050012;
+        public static final int no=0x7f050035;
         public static final int none=0x7f050000;
         public static final int normal=0x7f050001;
         public static final int numPeople=0x7f050007;
@@ -286,6 +288,7 @@ containing a value of this type.
         public static final int textView4=0x7f050008;
         public static final int title=0x7f05000f;
         public static final int vegChoices=0x7f050019;
+        public static final int yes=0x7f050037;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f070000;
