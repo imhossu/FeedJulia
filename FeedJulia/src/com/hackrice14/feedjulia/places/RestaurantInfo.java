@@ -45,6 +45,22 @@ public class RestaurantInfo implements Serializable{
 		}
 	}
 	
+
+	public double getLat() {
+		try {
+			if(base == null)
+				base = new JSONObject(baseStr);
+			
+			JSONObject geo = base.getJSONObject("geometry");
+			JSONObject loc = geo.getJSONObject("location");
+			double lat = loc.getDouble("lat");
+			return lat;
+			
+		} catch (JSONException e) {
+			return 0;
+		}
+	}
+	
 	public String getPhoto(int maxWidth) {
 		try {
 			if(base == null)
