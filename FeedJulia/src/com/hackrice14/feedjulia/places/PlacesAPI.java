@@ -13,20 +13,8 @@ import org.json.JSONObject;
 
 public class PlacesAPI {
 	private String key = "AIzaSyD53LDwRYVU9YVnNp4wdM24uV26Inn_e94";
-
-	public String pureResponse() {
-
-		double lat = 29.76429, lon = -95.38370;
-		String[] keywords = { "burgers", "vegetarian" };
-
-		String url = buildURL(lat, lon, keywords);
-		return getResponse(url);
-	}
 	
-	public ArrayList<RestaurantInfo> getPlaces() {
-		double lat = 29.76429, lon = -95.38370;
-		String[] keywords = { "burgers", "vegetarian" };
-
+	public ArrayList<RestaurantInfo> getPlaces(double lat, double lon, String[] keywords) {
 		String url = buildURL(lat, lon, keywords);
 		String response = getResponse(url);
 
