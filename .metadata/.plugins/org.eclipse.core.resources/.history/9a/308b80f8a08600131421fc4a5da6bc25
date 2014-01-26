@@ -101,10 +101,6 @@ public class Survey extends Activity {
 		warm.setSelection(1);
 		current.setAnswer("cold", Math.abs(warmVal - 1.00));
 		
-		Spinner price = (Spinner) findViewById(R.id.PriceChoices);
-		current.setAnswer("price", price.getSelectedItem().toString().length());
-		price.setSelection(0);
-		
 		return current;
 	}
 

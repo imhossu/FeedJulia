@@ -20,13 +20,6 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.gms.maps.CameraUpdateFactory;
-import com.google.android.gms.maps.MapFragment;
-import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.LatLngBounds;
-import com.google.android.gms.maps.model.Marker;
-import com.google.android.gms.maps.model.MarkerOptions;
-
 public class Place extends Activity {
 	ArrayList<RestaurantInfo> restaurants;
 
@@ -42,11 +35,9 @@ public class Place extends Activity {
 		index[0] = 0;
 		
 		final TextView title = (TextView) findViewById(R.id.title);
-		final TextView address = (TextView) findViewById(R.id.address);
 		final ImageView image = (ImageView) findViewById(R.id.image);
-		final MapFragment map = (MapFragment) getFragmentManager().findFragmentById(R.id.map);
 		
-		setInfo(index[0], title, image, address, map);
+		setInfo(index[0], title, image);
 		index[0]++;
 		
 		ImageView accept = (ImageView)findViewById(R.id.acceptResult);
@@ -67,7 +58,7 @@ public class Place extends Activity {
             @Override
             public void onClick(View v) 
             {
-            	setInfo(index[0], title, image, address, map);
+            	setInfo(index[0], title, image);
 				index[0]++;
             	
             }
@@ -75,22 +66,12 @@ public class Place extends Activity {
 		
 	}
 	
-	private void setInfo(int index, TextView title, ImageView image, TextView address, MapFragment map) {
+	private void setInfo(int index, TextView title, ImageView image) {
 		title.setText(restaurants.get(index).getName());
-		address.setText(restaurants.get(index).getAddress());
-		//map.getMap().addMarker(new MarkerOptions().position(new LatLng(restaurants.get(index).getLat(),restaurants.get(index).getLong())));
-		
-		//LatLngBounds bounds = new LatLngBounds.Builder()
-        //.include(new LatLng(restaurants.get(index).getLat(),restaurants.get(index).getLong()))
-        //.include((new LatLng(29.7169,-95.4028)))
-        //.build();
-
-        //map.getMap().animateCamera(CameraUpdateFactory.newLatLngBounds(bounds, 35));
-		
 		URL newurl;
 		try {
 			newurl = new URL(restaurants.get(index).getPhoto(100));
-			Bitmap mIcon_val = BitmapFactory.decodeStream(newurl.openConnection().getInputStream());
+			Bitmap mIcon_val = BitmapFactory.decodeStream(newurl.openConnection() .getInputStream());
 			image.setImageBitmap(mIcon_val);
 		} catch (MalformedURLException e) {
 			e.printStackTrace();
