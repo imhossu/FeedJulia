@@ -5,5 +5,4 @@ INDEX VERSION 1.126+/Users/iMaltese/Desktop/HackRice/.metadata/.plugins/org.ecli
 2507942468.index
 1415693123.index
 2485813508.index
-2740021589.index
 1048538550.index
