@@ -26,11 +26,13 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int creategroup=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int joingroup=0x7f020002;
-        public static final int passthephone=0x7f020003;
-        public static final int red=0x7f020004;
+        public static final int accept=0x7f020000;
+        public static final int creategroup=0x7f020001;
+        public static final int ic_launcher=0x7f020002;
+        public static final int joingroup=0x7f020003;
+        public static final int next=0x7f020004;
+        public static final int passthephone=0x7f020005;
+        public static final int red=0x7f020006;
     }
     public static final class id {
         public static final int AsianChoices=0x7f090025;
@@ -49,7 +51,7 @@ public final class R {
         public static final int TextSpicy=0x7f090015;
         public static final int TextWarm=0x7f09002a;
         public static final int WarmChoices=0x7f09002b;
-        public static final int accept=0x7f09000c;
+        public static final int acceptResult=0x7f09000b;
         public static final int action_settings=0x7f09002f;
         public static final int createGroup=0x7f09000f;
         public static final int editText2=0x7f090004;
@@ -60,7 +62,7 @@ public final class R {
         public static final int mainLayout=0x7f09000d;
         public static final int makeDecision=0x7f09002e;
         public static final int moreSurvey=0x7f09002d;
-        public static final int next=0x7f09000b;
+        public static final int nextResult=0x7f09000c;
         public static final int numPeople=0x7f090002;
         public static final int passThePhone=0x7f09000e;
         public static final int radioButton=0x7f090001;

@@ -15,6 +15,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,23 +40,29 @@ public class Place extends Activity {
 		setInfo(index[0], title, image);
 		index[0]++;
 		
-		final Button accept = (Button) findViewById(R.id.accept);
-		accept.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
+		ImageView accept = (ImageView)findViewById(R.id.acceptResult);
+        accept.setOnClickListener(new OnClickListener() 
+        {
+            @Override
+            public void onClick(View v) 
+            {
             	finish();
             	System.exit(0);
+            	
             }
         });
-		
-		final Button next = (Button) findViewById(R.id.next);
-		next.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				setInfo(index[0], title, image);
+        
+        ImageView next = (ImageView)findViewById(R.id.nextResult);
+        next.setOnClickListener(new OnClickListener() 
+        {
+            @Override
+            public void onClick(View v) 
+            {
+            	setInfo(index[0], title, image);
 				index[0]++;
-			}
-		});
+            	
+            }
+        });
 		
 	}
 	
