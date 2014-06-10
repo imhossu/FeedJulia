@@ -1,10 +1,3 @@
-hackRice 2014 App
+HackRice 2014 App
 
-App to feed children!
-
-Kate plays with git too!
-
-Jeff can also commit!
-
-
-carolyn waz right here -->
+App to help a group decide on a place to eat based on a quick questionaire of preferences, allergies, etc. 
